@@ -1,0 +1,13 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: clahan-service
+spec:
+  selector:
+    name: webapp
+  type: LoadBalancer
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9376
+
